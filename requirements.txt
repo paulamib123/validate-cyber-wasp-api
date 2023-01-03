@@ -1,0 +1,15 @@
+Werkzeug==1.0.1
+Jinja2==2.11.3
+MarkupSafe==1.1.1
+itsdangerous==1.1.0
+click==7.1.2
+Flask==1.1.2
+jsonschema==3.2.0
+uuid==1.30
+python-dotenv
+Flask-SQLAlchemy
+psycopg2
+pytest
+pytest-mock
+pytz
+rfc3339-validator

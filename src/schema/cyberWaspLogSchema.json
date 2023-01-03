@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CyberWaspLog",
+  "type": "object",
+  "properties": {
+    "@timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "client_ip": {
+      "type": "string",
+      "format": "ipv4"
+    },
+    "rule_id": {
+      "type": "string"
+    },
+    "error_msg": {
+      "type": "string"
+    },
+    "stream": {
+      "type": "string"
+    },
+    "attack_url": {
+      "type": "string",
+      "format": "text"
+    },
+    "event_time": {
+      "type": "string",
+      "format": "text"
+    },
+    "agent": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "ephemeral_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}"
+        },
+        "type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}"
+        },
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      }
+    },
+    "host": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "original": {
+          "type": "string"
+        }
+      }
+    },
+    "host_ip": {
+      "type": "string",
+      "format": "ipv4"
+    },
+    "alert_msg": {
+      "type": "string"
+    }
+  },
+  "required": ["@timestamp", "client_ip"]
+}
