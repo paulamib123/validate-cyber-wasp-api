@@ -16,8 +16,6 @@ COPY . /server
 
 ENV PYTHONPATH=/server
 
-RUN mkdir /server/data
-
 RUN mkdir /server/logs
 
 WORKDIR /server/src/api

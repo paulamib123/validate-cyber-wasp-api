@@ -1,6 +1,6 @@
-# Agent Gateway
+# Cyber Wasp Log Validation
 
-## Steps to run the Agent-Gateway
+## Steps to run the Validator
 
 ### • Creating the .env file
 
@@ -33,7 +33,6 @@
 ```
     docker run /
     -p 5000:5000 /
-    -v <your-absolute-path-to-data-folder>:/server/data /
     -v <your-absolute-path-to-logs-folder>:/server/logs /
     --env-file <your-absolute-path-to-.env-file>
     <container-name>
