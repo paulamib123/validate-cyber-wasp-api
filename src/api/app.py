@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 import logging
 
-from src.config.dbConfig import uri
+from src.config.configs import uri, credentials
 from src.routes.routes import registerRoutes
 
 
@@ -21,7 +21,7 @@ app = appConfig()
 registerRoutes(app, Session)
 
 if __name__ == "__main__": 
-    host = "0.0.0.0"
-    port = 5000   
+    host = credentials["flaskServerHost"]
+    port = int(credentials["flaskServerPort"])
     app.run(host=host, port=port, debug=True)
     

@@ -15,8 +15,13 @@ credentials = {
     "port" :
         os.getenv("DATABSE_PORT"),
     "database" :
-        os.getenv("DATABASE_NAME")
+        os.getenv("DATABASE_NAME"),
+    "flaskServerHost" : 
+        os.getenv("FLASK_SERVER_HOST"),
+    "flaskServerPort" : 
+        os.getenv("FLASK_SERVER_PORT")
 }
+
 
 
 def validateCredentials(credentials):

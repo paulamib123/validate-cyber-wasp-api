@@ -1,5 +1,9 @@
 from typing import Dict, List
 import logging
+from datetime import datetime
+from pytz import timezone, utc
+from time import mktime
+
 
 from src.models.CyberwaspLog import CyberwaspLogs
 
@@ -25,6 +29,14 @@ class CyberWaspLog():
         self.hostIP = log.get("host_ip")
         self.alertMsg = log.get("alert_msg")
 
+    def getCurrentTime(self):
+        utcTime = utc.localize(datetime.utcnow())
+        localTimeZone = timezone("Asia/Calcutta")
+        convertedTime = utcTime.astimezone(localTimeZone)
+        convertedTime = tuple(convertedTime.timetuple())
+        timestamp = datetime.fromtimestamp(mktime(convertedTime))
+        return timestamp
+
     
     def setEmptyToNull(self, key, log):
         value = log.get(key)
@@ -48,7 +60,8 @@ class CyberWaspLog():
             host_name = self.hostName,  
             event = self.event, 
             host_ip = self.hostIP, 
-            alert_msg = self.alertMsg 
+            alert_msg = self.alertMsg,
+            created_at = self.getCurrentTime()
         )
         
         logging.debug("Created Cyber Wasp Log Object for database")

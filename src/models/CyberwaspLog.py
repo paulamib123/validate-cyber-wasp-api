@@ -20,3 +20,4 @@ class CyberwaspLogs(db.Model):
     event = db.Column(db.JSON())
     host_ip = db.Column(db.Text)
     alert_msg = db.Column(db.TEXT())
+    created_at = db.Column(db.DateTime())
