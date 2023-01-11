@@ -9,11 +9,13 @@
 2. Mention the following variables in .env file
 
 ```
-    DATABASE_USERNAME=<database-username>
-    DATABSE_PASSWORD=<database-password>
-    DATABSE_HOST=<database-host>
-    DATABSE_PORT=<database-host>
-    DATABASE_NAME=<database-name>
+FLASK_SERVER_HOST=<flask-server-host>
+FLASK_SERVER_PORT=<flask-server-port>
+DATABASE_USERNAME=<database-username>
+DATABSE_PASSWORD=<database-password>
+DATABSE_HOST=<database-host>
+DATABSE_PORT=<database-host>
+DATABASE_NAME=<database-name>
 ```
 
 ### • Running the DockerFile
